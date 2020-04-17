@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - App inventor QRcode</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>App inventor QRcode</h1>
+<!-- <a id="githubLink" href="https://github.com/cozmo/jsQR">View documentation on Github</a> -->
+<!-- <p>Pure JavaScript QR code decoding library.</p> -->
+<div id="output" hidden>
+  <div id="outputMessage">No QR code detected.</div>
+  <div hidden><b>Data:</b> <span id="outputData"></span></div>
+</div>
+<div id="loadingMessage">🎥 Unable to access video stream (please make sure you have a webcam enabled)</div>
+<canvas id="canvas" hidden></canvas>
+
+<div id='abox'>
+  <a href="https://docs.google.com/spreadsheets/d/1uuEoLGc89ux-EEztiiEOFVagGrG4fmN3df4tf63VnA4/edit?usp=sharing">前往 MIT App Inventor 專案下載連結</a>
+</div>
+
+<!--  -->
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/jsqr@1.1.1/dist/jsQR.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
