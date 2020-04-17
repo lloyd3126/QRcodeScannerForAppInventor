@@ -47,20 +47,23 @@ function tick() {
       drawLine(code.location.bottomLeftCorner, code.location.topLeftCorner, "#FF3B58");
       outputMessage.hidden = true;
       outputData.parentElement.hidden = false;
-      projid = code.data.replace('https://koding.school/projects/', '').replace('/export.apk', '')
-      if(outputData.innerText != projid){
-        outputData.innerText = projid;
-        $.ajax({
-          url: "https://script.google.com/macros/s/AKfycbygAURaiMjWx8mm4N4UwQ5S4rR0XSwyZ-dfTSJA/exec",
-          data: {
-            "projid": projid
-          },
-          success: function(response) {
-            if(response == "成功"){
-              console.log("成功")
-            }
-          },
-        });
+      
+      if(code.data.indexOf('koding') != -1){
+        projid = code.data.replace('https://koding.school/projects/', '').replace('/export.apk', '')
+        if(outputData.innerText != projid){
+          outputData.innerText = projid;
+          $.ajax({
+            url: "https://script.google.com/macros/s/AKfycbygAURaiMjWx8mm4N4UwQ5S4rR0XSwyZ-dfTSJA/exec",
+            data: {
+              "projid": projid
+            },
+            success: function(response) {
+              if(response == "成功"){
+                console.log("成功")
+              }
+            },
+          });
+        }
       }
     } else {
       outputMessage.hidden = false;
