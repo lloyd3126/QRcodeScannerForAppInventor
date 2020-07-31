@@ -49,7 +49,7 @@ function tick() {
       outputData.parentElement.hidden = false;
       
       if(code.data.indexOf('https://koding.school/projects/') != -1){
-        projid = code.data.replace('https://koding.school/projects/', '').replace('/export.apk', '')
+        projid = code.data.replace('https://koding.school/projects/', '')
         if(outputData.innerText != projid){
           outputData.innerText = projid;
           $.ajax({
