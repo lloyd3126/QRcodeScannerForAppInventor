@@ -48,8 +48,8 @@ function tick() {
       outputMessage.hidden = true;
       outputData.parentElement.hidden = false;
       
-      if(code.data.indexOf('https://koding.school/projects/') != -1){
-        projid = code.data.replace('https://koding.school/projects/', '')
+      if(code.data.indexOf('http://ai2.appinventor.mit.edu/b/') != -1){
+        projid = code.data.replace('http://ai2.appinventor.mit.edu/b/', '')
         if(outputData.innerText != projid){
           outputData.innerText = projid;
           $.ajax({
