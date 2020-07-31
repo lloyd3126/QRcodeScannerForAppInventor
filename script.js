@@ -50,6 +50,7 @@ function tick() {
       
       if(code.data.indexOf('http://ai2.appinventor.mit.edu/b/') != -1){
         projid = code.data.replace('http://ai2.appinventor.mit.edu/b/', '')
+        console.log(projid)
         if(outputData.innerText != projid){
           outputData.innerText = projid;
           $.ajax({
