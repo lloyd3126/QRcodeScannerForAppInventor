@@ -53,7 +53,7 @@ function tick() {
         if(outputData.innerText != projid){
           outputData.innerText = projid;
           $.ajax({
-            url: "https://script.google.com/macros/s/AKfycbygAURaiMjWx8mm4N4UwQ5S4rR0XSwyZ-dfTSJA/exec",
+            url: "https://script.google.com/macros/s/AKfycbzCDZQ36bm9fkFnH3uNE7JHs-JOgElcqOE_7OQQCZ8y2Uzb90A/exec",
             data: {
               "projid": projid
             },
